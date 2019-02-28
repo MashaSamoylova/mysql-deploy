@@ -12,7 +12,9 @@ Run:
 ```
 
 ## Run
+```
 ./run.sh
+```
 
 For fix error `ERROR 1130 (HY000): Host '172.17.0.1' is not allowed to connect to this MySQL server`, run
 ```
