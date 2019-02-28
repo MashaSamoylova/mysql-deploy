@@ -17,7 +17,7 @@ For fix error `ERROR 1130 (HY000): Host '172.17.0.1' is not allowed to connect t
 ```
 ./fix_privilege.sh
 ```
-This script add possibility to connect from random host.
+This script adds possibility to connect from random host.
 
 ## Connect
 
