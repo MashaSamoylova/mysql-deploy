@@ -6,6 +6,7 @@ RUN groupadd mysql
 RUN  useradd -r -g mysql -s /bin/false mysql
 
 COPY distro /usr/local
+COPY create_db.sql /usr/local 
 WORKDIR /usr/local
 
 RUN mkdir mysql-dir
