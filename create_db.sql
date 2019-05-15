@@ -4,6 +4,7 @@ CREATE DATABASE passwordsHashes CHARACTER set utf8;
 USE firewallLogs;
 
 CREATE TABLE logs (
+    id int AUTO_INCREMENT NOT NULL,
     date_time      DATETIME NOT NULL,
     type           VARCHAR(20) NOT NULL,
     server_address VARCHAR(15) NOT NULL,
@@ -11,7 +12,7 @@ CREATE TABLE logs (
     client_address VARCHAR(15) NOT NULL,
     client_port    int NOT NULL,
 
-    PRIMARY KEY(date_time)
+    PRIMARY KEY(id)
 );
 
 USE passwordsHashes;
