@@ -32,3 +32,8 @@ Run command:
 ```
 mysql -P 3306 --protocol=tcp -u root
 ```
+
+Connect with certificates
+```
+mysql -P 3306 —protocol=tcp -u admin —ssl-ca=./db-data/data/ca.pem —ssl-cert=./db-data/data/client-cert.pem —ssl-key=./db-data/data/client-key.pem -p
+```
