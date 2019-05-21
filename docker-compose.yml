@@ -4,9 +4,15 @@ services:
     build: .
     ports:
       - "3306:3306"
+    volumes:
+      - ./db-data:/usr/local/mysql-dir/mysql-5.7.25-linux-glibc2.12-x86_64/test
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     depends_on:
       - db
     ports:
       - "8080:80"
+
+volumes:
+    db-data:
+

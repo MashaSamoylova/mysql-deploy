@@ -6,7 +6,7 @@
  */
 
 CREATE USER 'admin'@'%';
-GRANT ALL PRIVILEGES ON  *.* TO 'admin'@'%';
+GRANT INSERT, SELECT, DELETE, UPDATE  ON  *.* TO 'admin'@'%';
 
 /*
 2) Пользователя для управления схемой firewallLogs
@@ -16,8 +16,7 @@ GRANT ALL PRIVILEGES ON  *.* TO 'admin'@'%';
  */
 
 CREATE USER 'firewallAdmin'@'localhost';
-GRANT ALL PRIVILEGES ON firewallLogs.* TO 'firewallAdmin'@'localhost'
-GWITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON firewallLogs.* TO 'firewallAdmin'@'localhost' WITH GRANT OPTION;
 
 /*
 3) Пользователя для загрузки данных в таблицы схемы passwordsHashes
@@ -27,7 +26,7 @@ GWITH GRANT OPTION;
  */
 
 CREATE USER 'pwdLoader'@'%';
-GRANT UPDATE, INSERT  ON passwordsHashes.* TO 'pwdLoader'@'%';
+GRANT UPDATE, INSERT  ON passwordsHashes.* TO 'pwdLoader'@'%' IDENTIFIED BY '1234';
 
 /*
 4) Пользователя для анализа данных в схеме passwordsHashes
@@ -45,5 +44,3 @@ GRANT SELECT ON passwordsHashes.* TO 'pwdAnalyst'@'%' WITH GRANT OPTION;
  */
 
 CREATE USER ''@'%';
-GRANT ALL ON *.* TO ''@'%';
-
