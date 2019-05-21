@@ -37,3 +37,14 @@ Connect with certificates
 ```
 mysql -P 3306 —protocol=tcp -u admin —ssl-ca=./db-data/data/ca.pem —ssl-cert=./db-data/data/client-cert.pem —ssl-key=./db-data/data/client-key.pem -p
 ```
+
+## Open ssl
+Generate cert:
+```
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365
+```
+
+Get issuer from cert
+```
+openssl x509 -in client-cert.pem -issuer
+```
