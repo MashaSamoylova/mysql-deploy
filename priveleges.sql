@@ -5,7 +5,7 @@
 без права передавать привилегии
  */
 
-CREATE USER 'admin'@'%';
+CREATE USER 'admin'@'%' IDENTIFIED BY "1234";
 GRANT INSERT, SELECT, DELETE, UPDATE  ON  *.* TO 'admin'@'%';
 
 /*
@@ -15,7 +15,7 @@ GRANT INSERT, SELECT, DELETE, UPDATE  ON  *.* TO 'admin'@'%';
 с правом передавать привелегии
  */
 
-CREATE USER 'firewallAdmin'@'localhost';
+CREATE USER 'firewallAdmin'@'localhost' IDENTIFIED BY "1234";
 GRANT ALL PRIVILEGES ON firewallLogs.* TO 'firewallAdmin'@'localhost' WITH GRANT OPTION;
 
 /*
@@ -25,7 +25,7 @@ GRANT ALL PRIVILEGES ON firewallLogs.* TO 'firewallAdmin'@'localhost' WITH GRANT
 без права передавать привилегии
  */
 
-CREATE USER 'pwdLoader'@'%';
+CREATE USER 'pwdLoader'@'%' IDENTIFIED BY "1234";
 GRANT UPDATE, INSERT  ON passwordsHashes.* TO 'pwdLoader'@'%' IDENTIFIED BY '1234';
 
 /*
@@ -35,7 +35,7 @@ GRANT UPDATE, INSERT  ON passwordsHashes.* TO 'pwdLoader'@'%' IDENTIFIED BY '123
  */
 
 
-CREATE USER 'pwdAnalyst'@'%';
+CREATE USER 'pwdLoader'@'%' IDENTIFIED BY "1234";
 GRANT SELECT ON passwordsHashes.* TO 'pwdAnalyst'@'%' WITH GRANT OPTION;
 
 /*
