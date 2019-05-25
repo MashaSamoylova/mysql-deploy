@@ -26,7 +26,7 @@ GRANT ALL PRIVILEGES ON firewallLogs.* TO 'firewallAdmin'@'localhost' WITH GRANT
  */
 
 CREATE USER 'pwdLoader'@'%' IDENTIFIED BY "1234";
-GRANT UPDATE, INSERT  ON passwordsHashes.* TO 'pwdLoader'@'%' IDENTIFIED BY '1234';
+GRANT UPDATE, INSERT  ON passwordsHashes.* TO 'pwdLoader'@'%';
 
 /*
 4) Пользователя для анализа данных в схеме passwordsHashes
