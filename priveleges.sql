@@ -35,7 +35,7 @@ GRANT UPDATE, INSERT  ON passwordsHashes.* TO 'pwdLoader'@'%' IDENTIFIED BY '123
  */
 
 
-CREATE USER 'pwdLoader'@'%' IDENTIFIED BY "1234";
+CREATE USER 'pwdAnalyst'@'%' IDENTIFIED BY "1234";
 GRANT SELECT ON passwordsHashes.* TO 'pwdAnalyst'@'%' WITH GRANT OPTION;
 
 /*
